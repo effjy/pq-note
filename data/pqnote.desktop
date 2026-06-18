@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=PQ-Note
+GenericName=Encrypted Notes
+Comment=Post-quantum encrypted notes (Kyber-1024 + X448 hybrid)
+Exec=pqnote
+Icon=pqnote
+Terminal=false
+Categories=Utility;Office;Security;GTK;
+Keywords=notes;notebook;encrypted;post-quantum;kyber;x448;crypto;security;
+StartupNotify=true
+StartupWMClass=pqnote

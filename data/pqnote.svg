@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0f1a"/>
+      <stop offset="1" stop-color="#060910"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00e5ff"/>
+      <stop offset="1" stop-color="#b026ff"/>
+    </linearGradient>
+    <linearGradient id="page" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101f30"/>
+      <stop offset="1" stop-color="#0a1622"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.62">
+      <stop offset="0" stop-color="#b026ff" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#b026ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="f" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5"/>
+    </filter>
+  </defs>
+
+  <!-- rounded dark tile -->
+  <rect x="8" y="8" width="240" height="240" rx="46" fill="url(#bg)" stroke="#11202e" stroke-width="2"/>
+  <ellipse cx="128" cy="116" rx="120" ry="112" fill="url(#glow)"/>
+
+  <!-- note page with a folded top-right corner -->
+  <g>
+    <path d="M64 40 H160 L196 76 V216 H64 Z"
+          fill="url(#page)" stroke="url(#edge)" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M64 40 H160 L196 76 V216 H64 Z"
+          fill="none" stroke="#00e5ff" stroke-width="6" stroke-linejoin="round"
+          opacity="0.3" filter="url(#f)"/>
+    <!-- folded corner -->
+    <path d="M160 40 V76 H196 Z" fill="#0a1622" stroke="url(#edge)" stroke-width="5" stroke-linejoin="round"/>
+  </g>
+
+  <!-- lines of text on the note -->
+  <g stroke="#2a6b80" stroke-width="7" stroke-linecap="round">
+    <line x1="86" y1="104" x2="150" y2="104"/>
+    <line x1="86" y1="128" x2="174" y2="128"/>
+    <line x1="86" y1="152" x2="174" y2="152"/>
+    <line x1="86" y1="176" x2="138" y2="176"/>
+  </g>
+
+  <!-- post-quantum orbit seal over the note -->
+  <g transform="translate(150 168)">
+    <circle cx="0" cy="0" r="34" fill="#0a121e" stroke="url(#edge)" stroke-width="5"/>
+    <g stroke="#00e5ff" stroke-width="2.6" fill="none" opacity="0.9">
+      <ellipse cx="0" cy="0" rx="26" ry="10"/>
+      <ellipse cx="0" cy="0" rx="26" ry="10" transform="rotate(60)"/>
+      <ellipse cx="0" cy="0" rx="26" ry="10" transform="rotate(-60)" stroke="#b026ff"/>
+    </g>
+    <circle cx="0" cy="0" r="5.5" fill="#39ff14"/>
+    <circle cx="26" cy="0" r="3.4" fill="#00e5ff"/>
+    <circle cx="-13" cy="22" r="3.4" fill="#b026ff"/>
+    <circle cx="-13" cy="-22" r="3.4" fill="#00e5ff"/>
+  </g>
+</svg>
